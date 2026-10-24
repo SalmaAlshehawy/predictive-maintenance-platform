@@ -26,6 +26,15 @@ a Python inference service for predictive maintenance.
 > of the current application or a guarantee that every depicted integration is
 > implemented.
 
+## My Contribution — Salma Alshehawy
+
+I built the **computer vision quality-inspection module** (`ml/quality/`):
+
+- PatchCore anomaly detection (anomalib, PyTorch) on a frozen pretrained Wide ResNet-50 backbone, trained only on defect-free images
+- Trained and evaluated on the GoodsAD `food_box` dataset: **image AUROC 0.80, pixel AUROC 0.97**
+- Data preparation, training, and inference scripts, plus a brightness/contrast augmentation experiment
+- Integrated into the platform through the `POST /api/inspect` endpoint, returning an anomaly score and defect heatmap
+
 ## At a glance
 
 - Monitor a demo fleet with machine profiles, sensor trends, alerts, and
